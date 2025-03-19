@@ -2,11 +2,14 @@ import React, { useEffect, useState } from "react";
 import styled, { css } from "styled-components";
 
 const AlertWrapper = styled.div`
+  position: absolute;
+  width: 400px;
+  height: auto;
   padding: 16px 20px;
   border-radius: 8px;
   color: #fff;
   font-weight: 500;
-  margin: 16px 0;
+  margin: 16px 30%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   opacity: ${({ isVisible }) => (isVisible ? 1 : 0)};
   transition: opacity 0.5s ease-in-out;
