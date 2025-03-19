@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# 🧾 Invoice App - ReactJS Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A **ReactJS** invoicing application that allows users to create professional invoices with line items, notes, etc. Built with `React`, `styled-components`, `Webpack`, and `Babel`.
 
-## Available Scripts
+👉 **Live Demo:** [https://vibha-invoice-app.netlify.app/create-invoices](https://vibha-invoice-app.netlify.app/create-invoices)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## ✅ Features Implemented
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Create Invoice**
+- **View Invoices with Paid, Outstanding and Due flag (Badge)**
+- **Add Invoice Number:** Invoice Number.
+- **Invoice Date:** Auto-filled with today’s date (editable)
+- **Add Client Name:** Type Client Name.
+- **Add Notes:** Instructions, payment details, etc.
+- **Add Multiple Line Items:** Hours, work expenses, materials, labor, etc.
+- **Delete Line Items:** To be implemented.
+- **View Total Amount** Static for now
+- **Reusable Components:** InputField, Alert, Button, LineItems, Badge, InvoiceTable
+- **Mock Email Alert:** Displays success message on sending and the resetting state
+- **Styled using Styled Components**
+- **Auto-Dismiss Alert** after 3 seconds by default
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🧠 Extra Added Features
+- Invoice Due Date
+- Polish UI
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 📸 Screenshots
+### 🖼 **View Invoices with Paid, Outstanding and Due flag (Static)**
+![View Invoices](public/snapshots/image1.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 🖼 **Create Invoice with Line items table and Invoice due date**
+![Create Invoice](public/snapshots/image2.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 🖼 **Send Invoice Success**
+![Send Invoice](public/snapshots/image3.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 📦 Tech Stack
+- **React 19**
+- **Styled-Components 6**
+- **React Icons**
+- **React Router DOM 7**
+- **Webpack 5 / Babel 7**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📂 Project Structure

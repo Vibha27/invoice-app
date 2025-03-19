@@ -106,7 +106,7 @@ export const CreateInvoice = () => {
         />
         <InputField
           name="invoiceDate"
-          label="Invoice Date"
+          label="Due Date"
           type="date"
           value={invoiceDetail.invoiceDate}
           onChange={handleInputChange}
