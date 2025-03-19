@@ -6,7 +6,7 @@ const HeaderContainer = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 4px 20px;
+  padding: 8px 20px;
   background-color: #121212;
   color: white;
 `;

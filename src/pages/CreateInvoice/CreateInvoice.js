@@ -94,7 +94,7 @@ export const CreateInvoice = () => {
       />}
       <h2>Create Invoice</h2>
       <hr />
-      <InvoiceForm style={{ padding: "4px" }}>
+      <InvoiceForm style={{ padding: "4px 2px" }}>
         <InputField
           name="invoiceNumber"
           label="Invoice Number"

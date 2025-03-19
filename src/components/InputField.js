@@ -42,7 +42,7 @@ const StyledInput = styled.input`
 const StyledTextarea = styled.textarea`
   ${inputStyles}
   resize: vertical;
-  min-height: 100px;
+  min-height: 50px;
 `;
 
 const InputField = ({

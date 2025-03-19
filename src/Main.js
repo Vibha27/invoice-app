@@ -7,7 +7,7 @@ import { AppRoutes } from "./AppRoutes";
 const Layout = styled.div`
   display: flex;
   overflow: hidden;
-  height: calc(100vh - 53px);
+  height: calc(100vh - 59px);
 `;
 
 const Content = styled.main`

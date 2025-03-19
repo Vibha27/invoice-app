@@ -7,6 +7,11 @@ export const Wrapper = styled.div`
   overflow-x: hidden;
   border-radius: 12px;
   padding: 4px 18px;
+
+  h2 {
+    line-height: 10px;
+  }
+
 `;
 
 export const InvoiceForm = styled.form`
