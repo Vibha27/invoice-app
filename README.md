@@ -2,7 +2,7 @@
 
 A **ReactJS** invoicing application that allows users to create professional invoices with line items, notes, etc. Built with `React`, `styled-components`, `Webpack`, and `Babel`.
 
-👉 **Live Demo:** [https://vibha-invoice-app.netlify.app/create-invoices](https://vibha-invoice-app.netlify.app/create-invoices)
+👉 **Live Demo:** [https://vibha-invoice-app.netlify.app/](https://vibha-invoice-app.netlify.app/)
 
 ---
 
