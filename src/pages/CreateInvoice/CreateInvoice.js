@@ -7,8 +7,10 @@ import { FaPlus, FaRupeeSign } from "react-icons/fa";
 import { Alert } from "../../components/Alert";
 
 export const CreateInvoice = () => {
+  const today = new Date().toISOString().split('T')[0];
   const [invoiceDetail, setInvoiceDetail] = useState({
     invoiceNumber: "",
+    invoiceDate: today,
     clientName: "",
     taxNumber: "",
     note: "",
@@ -67,6 +69,7 @@ export const CreateInvoice = () => {
     setShowAlert(true);
     setInvoiceDetail({
       invoiceNumber: "",
+      invoiceDate: today,
       clientName: "",
       taxNumber: "",
       note: "",
@@ -101,6 +104,14 @@ export const CreateInvoice = () => {
           onChange={handleInputChange}
           required
         />
+        <InputField
+          name="invoiceDate"
+          label="Invoice Date"
+          type="date"
+          value={invoiceDetail.invoiceDate}
+          onChange={handleInputChange}
+          required
+        />
 
         <InputField
           name="clientName"
@@ -109,6 +120,7 @@ export const CreateInvoice = () => {
           placeholder="Enter client name"
           value={invoiceDetail.clientName}
           onChange={handleInputChange}
+          required
         />
 
         <InputField
@@ -118,6 +130,7 @@ export const CreateInvoice = () => {
           placeholder="11111111111"
           value={invoiceDetail.taxNumber}
           onChange={handleInputChange}
+          required
         />
 
         <InputField
