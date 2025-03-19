@@ -1,7 +1,12 @@
 import React from 'react';
+import { InvoiceTable } from './components/InvoiceTable';
+import { InvoiceData } from './invoiceData';
+import { Wrapper } from '../CreateInvoice/style';
 
 export const ViewInvoices = () => {
-    return <div>
+    return <Wrapper>
         <h2>View Invoices</h2>
-    </div>
+        <hr />
+        <InvoiceTable invoices={InvoiceData}/>
+    </Wrapper>
 }
