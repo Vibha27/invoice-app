@@ -17,7 +17,7 @@ const Label = styled.label`
 
 // Base Input Style
 const inputStyles = css`
-  padding: 12px 16px;
+  padding: 12px 8px;
   border: 1px solid #ccc;
   border-radius: 8px;
   font-size: 1rem;
@@ -25,7 +25,7 @@ const inputStyles = css`
   transition: border-color 0.3s ease;
 
   &:focus {
-    border-color: #121212; /* Cyan focus */
+    border-color: #121212;
   }
 
   &::placeholder {
@@ -46,7 +46,7 @@ const StyledTextarea = styled.textarea`
 `;
 
 const InputField = ({
-  label,
+  label = null,
   type = "text",
   value,
   onChange,
