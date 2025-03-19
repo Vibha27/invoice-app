@@ -4,6 +4,7 @@ import InputField from "../../components/InputField";
 import Button from "../../components/Button";
 import { LineItems } from "./components/LineItems";
 import { FaPlus, FaRupeeSign } from "react-icons/fa";
+import { Alert } from "../../components/Alert";
 
 export const CreateInvoice = () => {
   const [invoiceDetail, setInvoiceDetail] = useState({
@@ -24,7 +25,8 @@ export const CreateInvoice = () => {
   });
 
   const [itemsCount, setItemsCount] = useState(1);
-  
+  const [showAlert, setShowAlert] = useState(false);
+
   const handleInputChange = (e, index = null) => {
     let { value, name } = e.target;
 
@@ -42,6 +44,7 @@ export const CreateInvoice = () => {
         [name]: value,
       }));
     }
+    setShowAlert(false);
   };
 
   const handleAddItems = () => {
@@ -60,8 +63,32 @@ export const CreateInvoice = () => {
     setItemsCount((prevCount) => prevCount + 1);
   };
 
+  const handleSendInvoice = () => {
+    setShowAlert(true);
+    setInvoiceDetail({
+      invoiceNumber: "",
+      clientName: "",
+      taxNumber: "",
+      note: "",
+      items: [
+        {
+          item: "Item 1",
+          laborCharge: 0,
+          materialCost: 0,
+          hourlyRate: 0,
+          hourWorked: 0,
+          workExpense: 0,
+        },
+      ],
+    })
+  };
+
   return (
     <Wrapper>
+      {showAlert && <Alert
+        message={"Invoice has been sent successfuly on customer's email!"}
+        type="success"
+      />}
       <h2>Create Invoice</h2>
       <hr />
       <InvoiceForm style={{ padding: "4px" }}>
@@ -113,9 +140,13 @@ export const CreateInvoice = () => {
       </Button>
 
       <InvoiceAction>
-        <TotalAmount><FaRupeeSign size={14}/> 18,50,000</TotalAmount>
+        <TotalAmount>
+          <FaRupeeSign size={14} /> 18,50,000
+        </TotalAmount>
         <Button variant="secondary">Cancel</Button>&nbsp;
-        <Button variant="primary">Save Invoice</Button>
+        <Button variant="primary" onClick={handleSendInvoice}>
+          Send Invoice
+        </Button>
       </InvoiceAction>
     </Wrapper>
   );
