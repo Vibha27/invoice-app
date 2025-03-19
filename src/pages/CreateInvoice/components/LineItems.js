@@ -33,7 +33,6 @@ export const LineItems = ({ items = [], handleInputChange }) => {
                     <InputField
                       name="laborCharge"
                       type="text"
-                      placeholder="eg: IA00001"
                       value={item.laborCharge}
                       onChange={(e) => handleInputChange(e, index)}
                     />
@@ -42,7 +41,6 @@ export const LineItems = ({ items = [], handleInputChange }) => {
                     <InputField
                       name="materialCost"
                       type="text"
-                      placeholder="eg: IA00001"
                       value={item.materialCost}
                       onChange={(e) => handleInputChange(e, index)}
                     />
@@ -51,7 +49,6 @@ export const LineItems = ({ items = [], handleInputChange }) => {
                     <InputField
                       type="text"
                       name="workExpense"
-                      placeholder="eg: IA00001"
                       value={item.workExpense}
                       onChange={(e) => handleInputChange(e, index)}
                     />
@@ -60,7 +57,6 @@ export const LineItems = ({ items = [], handleInputChange }) => {
                     <InputField
                       type="text"
                       name="hourlyRate"
-                      placeholder="eg: IA00001"
                       value={item.hourlyRate}
                       onChange={(e) => handleInputChange(e, index)}
                     />
@@ -69,7 +65,6 @@ export const LineItems = ({ items = [], handleInputChange }) => {
                     <InputField
                       type="text"
                       name="hourWorked"
-                      placeholder="eg: IA00001"
                       value={item.hourWorked}
                       onChange={(e) => handleInputChange(e, index)}
                     />
