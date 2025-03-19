@@ -1,17 +1,18 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { TbFileInvoice } from "react-icons/tb";
 import { IoCreateOutline } from "react-icons/io5";
 
 const SidebarContainer = styled.aside`
-  width: 25px;
+  width: 42px;
   height: 100vh;
-  padding: 0px 20px;
-  background: rgba(255, 255, 255, 0.4); /* Transparent white */
+  padding: 0px 10px;
   backdrop-filter: blur(12px);
-  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.2); /* 3D Shadow */
-  color: #121212;
+  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.2);
+  background-color: #2a2a2a;
+  color: white;
+
 `;
 
 const Menu = styled.ul`
@@ -21,22 +22,32 @@ const Menu = styled.ul`
 `;
 
 const MenuItem = styled.li`
-//   padding: 0.8rem;
   cursor: pointer;
-//   &:hover {
-//     background: #2c3e50;
-//   }
 
   a {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     gap: 8px;
     text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
   }
+
+  a.active {
+    color: #06b6d4;
+  }
+
   svg {
     font-size: 32px;
     margin-top: 8px;
+  }
+
+  p {
+    line-height: 0px;
+    font-size: 12px;
+    text-align: center;
   }
 `;
 
@@ -45,14 +56,16 @@ export const Sidebar = () => {
     <SidebarContainer>
       <Menu>
         <MenuItem>
-          <Link to={"/view-invoices"}>
+          <NavLink to="/view-invoices" className={({ isActive }) => (isActive ? "active" : "")}>
             <TbFileInvoice />
-          </Link>
+          </NavLink>
+          <p>View</p>
         </MenuItem>
         <MenuItem>
-          <Link to={"/create-invoices"}>
+          <NavLink to="/create-invoices" className={({ isActive }) => (isActive ? "active" : "")}>
             <IoCreateOutline />
-          </Link>
+          </NavLink>
+          <p>Create</p>
         </MenuItem>
       </Menu>
     </SidebarContainer>
