@@ -20,6 +20,11 @@ export const InvoiceAction = styled.div`
   justify-content: flex-end;
 `;
 
+export const TotalAmount = styled.div`
+  font-weight: 700;
+  margin: 14px;
+`;
+
 export const TableWrapper = styled.div`
   overflow-x: auto;
   margin: 20px 0;

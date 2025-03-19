@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { InvoiceAction, InvoiceForm, Wrapper } from "./style";
+import { InvoiceAction, InvoiceForm, TotalAmount, Wrapper } from "./style";
 import InputField from "../../components/InputField";
 import Button from "../../components/Button";
 import { LineItems } from "./components/LineItems";
-import { FaPlus } from "react-icons/fa";
+import { FaPlus, FaRupeeSign } from "react-icons/fa";
 
 export const CreateInvoice = () => {
   const [invoiceDetail, setInvoiceDetail] = useState({
@@ -24,7 +24,7 @@ export const CreateInvoice = () => {
   });
 
   const [itemsCount, setItemsCount] = useState(1);
-
+  
   const handleInputChange = (e, index = null) => {
     let { value, name } = e.target;
 
@@ -113,6 +113,7 @@ export const CreateInvoice = () => {
       </Button>
 
       <InvoiceAction>
+        <TotalAmount><FaRupeeSign size={14}/> 18,50,000</TotalAmount>
         <Button variant="secondary">Cancel</Button>&nbsp;
         <Button variant="primary">Save Invoice</Button>
       </InvoiceAction>
