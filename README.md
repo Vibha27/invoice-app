@@ -50,5 +50,3 @@ A **ReactJS** invoicing application that allows users to create professional inv
 - **Webpack 5 / Babel 7**
 
 ---
-
-## 📂 Project Structure
